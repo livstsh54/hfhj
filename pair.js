@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
     
-    async function FATIMA_MD_PAIR_CODE() {
+    async function KAMRAN_MD_PAIR_CODE() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id);
         let sock;
         let connectionClosed = false;
@@ -84,7 +84,7 @@ router.get('/', async (req, res) => {
                         await sock.sendMessage(
                             sock.user.id,
                             {
-                                text: '*Hello there DUA FATIMA User! \ud83d\udc4b\ud83c\udffb* \n\n> Do not share your session id with anyone. use it only for bot deploy.\n\n *Thanks for using DUA FATIMA Bots \ud83c\uddf5\ud83c\uddf0* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VbAhxYY90x2vgwhXJV3O\n\n _Dont forget to give star to repos ⬇️_ \n\n- *DUA FATIMA Repository ✅* \n\https://github.com/policeduafatima/FATIMA-MD\n\n- *FATIMA-MD Repository ✅*\n\nhttps://github.com/policeduafatima/FATIMA-MD\n\n> *Powered BY DUA FATIMA* \ud83d\udda4'
+                                text: '*Hello there DR KAMRAN User! \ud83d\udc4b\ud83c\udffb* \n\n> Do not share your session id with anyone. use it only for bot deploy.\n\n *Thanks for using DR KAMRAN Bots \ud83c\uddf5\ud83c\uddf0* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VbAhxYY90x2vgwhXJV3O\n\n _Dont forget to give star to repos ⬇️_ \n\n- *KAMRAN Repository ✅* \n\https://github.com/KAMRAN-SMD/KAMRAN-MD\n\n- *KAMRAN-MD Repository ✅*\n\nhttps://github.com/policeduafatima/FATIMA-MD\n\n> *Powered BY DUA FATIMA* \ud83d\udda4'
                             },
                             { quoted: codeMsg }
                         );
@@ -92,7 +92,7 @@ router.get('/', async (req, res) => {
                     } catch (e) {
                         console.error('Error during session processing:', e);
                         let errorMsg = await sock.sendMessage(sock.user.id, { text: e.toString() });
-                        let desc = `*Don't Share with anyone this code use for deploying DUA FATIMA MD*\n\n ◦ *Github:* https://github.com/policeduafatima/FATIMA-MD`;
+                        let desc = `*Don't Share with anyone this code use for deploying KAMRAN MD*\n\n ◦ *Github:* https://github.com/KAMRAN-SMD/KAMRAN-MD`;
                         await sock.sendMessage(sock.user.id, { text: desc }, { quoted: errorMsg });
                     }
                     
@@ -110,7 +110,7 @@ router.get('/', async (req, res) => {
                         console.log('Connection closed unexpectedly, attempting reconnect...');
                         await delay(10000); // Wait 10 seconds before reconnecting
                         if (!connectionClosed) {
-                            await FATIMA_MD_PAIR_CODE();
+                            await KAMRAN_MD_PAIR_CODE();
                         }
                     }
                 }
@@ -139,7 +139,7 @@ router.get('/', async (req, res) => {
         }
     }
     
-    await FATIMA_MD_PAIR_CODE();
+    await KAMRAN_MD_PAIR_CODE();
 });
 
 module.exports = router;
